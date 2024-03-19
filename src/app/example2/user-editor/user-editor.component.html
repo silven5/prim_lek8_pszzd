@@ -1,0 +1,31 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="neumorphic-card">
+  <div class="flex">
+    <label class="neumorphic-label"
+      >User Name:
+      <input type="text" class="neumorphic-input" formControlName="userName" />
+    </label>
+    <label class="neumorphic-label"
+      >User Email
+      <input type="text" class="neumorphic-input" formControlName="userEmail" />
+    </label>
+    <label class="neumorphic-label"
+      >User Phones
+      <input
+        type="text"
+        class="neumorphic-input"
+        formControlName="userPhones"
+      />
+    </label>
+    <label class="neumorphic-label"
+      >User Color
+      <input
+        type="color"
+        class="neumorphic-input"
+        formControlName="userColor"
+      />
+    </label>
+    <button type="submit" class="neumorphic-btn" [disabled]="!myForm.valid">
+      Submit
+    </button>
+  </div>
+</form>

@@ -1,0 +1,49 @@
+<form [formGroup]="profileForm" novalidate (ngSubmit)="onSubmit()" class="flex">
+  <div class="flex flex-row flex-wrap">
+    <div class="neumorphic-card flex">
+      <h3>User Info</h3>
+      <label class="neumorphic-label"
+        >First Name:
+        <input
+          type="text"
+          class="neumorphic-input"
+          formControlName="firstName"
+        />
+      </label>
+      <label class="neumorphic-label"
+        >Last Name:
+        <input
+          type="text"
+          class="neumorphic-input"
+          formControlName="lastName"
+        />
+      </label>
+      <label class="neumorphic-label"
+        >Login:
+        <input type="text" class="neumorphic-input" formControlName="Login" />
+      </label>
+    </div>
+    <div formGroupName="address" class="neumorphic-card flex">
+      <h3>Adress</h3>
+      <label class="neumorphic-label"
+        >Street:
+        <input type="text" class="neumorphic-input" formControlName="street" />
+      </label>
+      <label class="neumorphic-label"
+        >City:
+        <input type="text" class="neumorphic-input" formControlName="city" />
+      </label>
+      <label class="neumorphic-label"
+        >State:
+        <input type="text" class="neumorphic-input" formControlName="state" />
+      </label>
+      <label class="neumorphic-label"
+        >zip Code:
+        <input type="text" class="neumorphic-input" formControlName="zip" />
+      </label>
+    </div>
+  </div>
+  <button type="submit" class="neumorphic-btn" [disabled]="!profileForm.valid">
+    Submit
+  </button>
+</form>

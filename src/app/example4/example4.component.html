@@ -1,0 +1,29 @@
+<div class="flex card-neumorphic">
+  <h2>Декоратор Input</h2>
+  <button class="neumorphic-btn" (click)="changeChild1Data()">
+    Відправити
+  </button>
+  <h2>This is parent component:</h2>
+  <hr />
+  <app-child-example1
+    [inFromParent]="string1"
+    [sum]="sum"
+    [mul]="don"
+    [div]="div"
+  >
+  </app-child-example1>
+</div>
+<div class="flex card-neumorphic">
+  <h2>Декоратор Output and EventEmitter</h2>
+  <button class="neumorphic-btn" (click)="changeChild1Data()">
+    Відправити
+  </button>
+  <h2>This is parent component:</h2>
+  <hr />
+  <strong>{{ string2 }}</strong>
+  <app-child-example2
+    (outToParent)="receiveFromChild($event)"
+    [inFromParent]="string1"
+  >
+  </app-child-example2>
+</div>

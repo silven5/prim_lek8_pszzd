@@ -1,0 +1,48 @@
+<div class="flex card-neumorphic">
+  <h2>Приклад 1-2</h2>
+  <div class="flex flex-row flex-wrap">
+    <div class="neumorphic-card flex">
+      <h3>Класична форма</h3>
+      <form class="flex">
+        <label class="neumorphic-label"
+          >Name
+          <input
+            type="text"
+            class="neumorphic-input"
+            #inputA
+            value="{{ name1 }}"
+          />
+        </label>
+        <button
+          (click)="ras(inputA.value)"
+          color="tertiary"
+          expand="block"
+          fill="outline"
+          class="neumorphic-btn"
+        >
+          Go
+        </button>
+        <p class="neumorphic-label">{{ name1 }}</p>
+      </form>
+    </div>
+    <div class="neumorphic-card flex">
+      <h3>Реактивна форма</h3>
+      <div class="flex">
+        <label class="neumorphic-label"
+          >Name
+          <input type="text" class="neumorphic-input" [formControl]="name" />
+        </label>
+        <button
+          (click)="updateName(inputA.value)"
+          color="tertiary"
+          expand="block"
+          fill="outline"
+          class="neumorphic-btn"
+        >
+          Go
+        </button>
+        <p class="neumorphic-label">{{ name.value }}</p>
+      </div>
+    </div>
+  </div>
+</div>

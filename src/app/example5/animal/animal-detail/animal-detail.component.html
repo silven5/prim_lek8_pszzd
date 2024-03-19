@@ -1,0 +1,25 @@
+<h2>Дані про тварин</h2>
+
+<h3>Номер тварини: {{ animal.id }}</h3>
+
+<label position="floating"
+  >Назва :
+  <input [value]="animal.name" class="neumorphic-input" #InputName />
+</label>
+
+<label position="floating"
+  >Тип :
+  <input [value]="animal.type" class="neumorphic-input" #InputType />
+</label>
+
+<label position="floating"
+  >Зовнішність :
+  <input [value]="animal.portrait" class="neumorphic-input" #InputPort />
+</label>
+
+<button
+  (click)="update(InputName.value, InputType.value, InputPort.value)"
+  class="neumorphic-btn"
+>
+  Оновити
+</button>

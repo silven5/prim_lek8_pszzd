@@ -1,0 +1,39 @@
+<form [formGroup]="skillsForm" (ngSubmit)="onSubmit()">
+  <div class="flex flex-row flex-wrap">
+    <div class="flex">
+      <label class="neumorphic-label"
+        >Герой
+        <input type="text" class="neumorphic-input" formControlName="hero" />
+      </label>
+    </div>
+    <div class="flex" formArrayName="skills">
+      <h2>Вміння</h2>
+      <button class="neumorphic-btn" (click)="addSkill()">Додати вміння</button>
+      <div class="flex" *ngFor="let skill of getControls(); let i = index">
+        <div classs="flex flex-row flex-wrap">
+          <input
+            type="text"
+            class="neumorphic-input"
+            formControlName="{{ i }}"
+          />
+          <button class="neumorphic-btn" (click)="deleteSkill(i)">
+            Видалити
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="neumorphic-btn">Відправити</button>
+  </div>
+</form>
+<div class="flex">
+  <div class="flex flex-row">
+    <h2>Інформація про героя</h2>
+    <h3>{{ skillsForm.value.hero }}</h3>
+  </div>
+  <h3>Вміння:</h3>
+
+  <div class="flex" *ngFor="let item of skillsForm.value.skills">
+    {{ item }}
+  </div>
+</div>

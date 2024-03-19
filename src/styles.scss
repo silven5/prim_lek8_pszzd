@@ -1,1 +1,176 @@
-/* You can add global styles to this file, and also import other style files */
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input,
+select,
+input[type="checkbox"],
+input[type="radio"] {
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
+    outline: none;
+}
+body {
+    margin: 0;
+    background-color: #e5e9f4;
+    padding: 2rem;
+}
+a
+{
+    text-decoration: none;
+}
+h1 {
+    text-align: center;
+    color: hsl(0 0% 10%);
+    font-family: system-ui, sans-serif;
+    font-size: 3rem;
+}
+$text-color: #03134f;
+
+
+h2,
+h3 {
+
+    font-family: system-ui, sans-serif;
+    font-size: 160%;
+    color: $text-color;
+}
+
+h3 {
+    font-size: 130%;
+}
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.flex-row {
+    flex-direction: row;
+    gap: 20px;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+ .card-neumorphic {
+    margin-top: 20px;
+     border-radius: 20px;
+     background-color: #eaeef3;
+     box-shadow: 20px 20px 40px #c7cacf, -20px -20px 40px #ffffff;
+ }
+ .img-neumorphic {
+     border-radius: 10px;
+     background-color: #eaeef3;
+     box-shadow: 10px 10px 20px #c7cacf, -10px -10px 20px #ffffff;
+ }
+
+ .user-neumorphic {
+     border-radius: 9999px;
+     background-color: #eaeef3;
+     box-shadow: 10px 10px 20px #c7cacf, -10px -10px 20px #ffffff;
+ }
+
+ .tag-neumorphic {
+     border-radius: 10px;
+     background-color: #eaeef3;
+     box-shadow: 5px 5px 20px #c7cacf, -5px -5px 20px #ffffff;
+ }
+ .neumorphic-btn {
+     font-size: 20px;
+     margin:20px;
+     border: none;
+     padding: 10px 40px;
+     border-radius: 40px;
+     color: #6D7587;
+     background-color: var(--back-color);
+       box-shadow: 7px 7px 15px rgba(55, 84, 170, .15),
+         -7px -7px 20px rgba(255, 255, 255, 1),
+         inset 0px 0px 4px rgba(255, 255, 255, .2),
+         inset 7px 7px 15px rgba(55, 84, 170, 0),
+         inset -7px -7px 20px rgba(255, 255, 255, 0),
+         0px 0px 4px rgba(255, 255, 255, 0) !important;
+     transition: box-shadow .25s ease !important;
+     cursor: pointer;
+ }
+
+ .neumorphic-btn:active {
+     box-shadow: 7px 7px 15px rgba(55, 84, 170, .15),
+         -7px -7px 20px rgba(255, 255, 255, 1),
+         inset 0px 0px 4px rgba(255, 255, 255, 0),
+         inset 7px 7px 15px rgba(55, 84, 170, .15),
+         inset -7px -7px 20px rgba(255, 255, 255, 1),
+         0px 0px 4px rgba(255, 255, 255, .2) !important;
+         cursor: pointer;
+ }
+  .neumorphic-btn:disabled
+  {
+    
+    color: hsl(10 80% 50%);
+    cursor:auto;
+  }
+ .neumorphic-card {
+     display: block;
+     background-color: var(--back-color);
+     padding: 40px;
+     box-shadow: 7px 7px 15px rgba(55, 84, 170, .15),
+         -7px -7px 20px rgba(255, 255, 255, 1),
+         0px 0px 4px rgba(255, 255, 255, .2) !important;
+     border-radius: 30px;
+     max-width: 300px;
+     width: min-content;
+     margin-bottom: 20px;
+ }
+
+ .neumorphic-card__title {
+     color: #555F76;
+     font-size: 22px;
+     padding: 20px 0 10px;
+     text-align: start;
+ }
+
+ .neumorphic-card__text {
+     padding: 0 0 10px;
+     text-align: start;
+     color: #8D96A8;
+ }
+
+ .neumorphic-card__outer {
+     background-color: #f3f4f7;
+     border-radius: 10px;
+     border: 5px solid #f3f4f7;
+     box-shadow: 7px 7px 15px rgba(55, 84, 170, .15),
+         -7px -7px 20px rgba(255, 255, 255, 1),
+         0px 0px 4px rgba(255, 255, 255, .2) !important;
+     margin: -5px;
+ }
+ .neumorphic-label {
+     color: #868b98;
+     display: block;
+     text-align: start;
+     margin: 25px 10px 5px;
+ }
+
+ .neumorphic-input {
+     background-color: var(--back-color);
+     border-radius: 10px;
+     border: 3px solid #f3f4f7;
+     box-shadow: 2px 2px 3px rgba(55, 84, 170, .15),
+         inset 0px 0px 4px rgba(255, 255, 255, 0),
+         inset 7px 7px 15px rgba(55, 84, 170, .15),
+         inset -7px -7px 20px rgba(255, 255, 255, 1),
+         0px 0px 4px rgba(255, 255, 255, .2) !important;
+     padding: 5px 15px;
+     outline: none !important;
+     color: #535D74;
+ }
+input:invalid
+ {
+    color: hsl(10 80% 50%);
+ }

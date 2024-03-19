@@ -1,0 +1,16 @@
+<div class="flex">
+  <h2 class="card">Список магічних тварин</h2>
+
+  <div *ngFor="let animal of animals" class="flex flex-row flex-wrap card">
+    <h3>Назва:</h3>
+    {{ animal.name }}
+
+    <button (click)="showDetails(animal)" class="neumorphic-btn">
+      Перегляд
+    </button>
+  </div>
+</div>
+<app-animal-detail
+  [animal]="selectedAnimal"
+  (animalChange)="update($event)"
+></app-animal-detail>
